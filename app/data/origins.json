@@ -1,0 +1,793 @@
+[
+  {
+    "country": "Australia",
+    "popular_dishes": [
+      {
+        "name": "Chicken Parmigiana with Pub Roll",
+        "flavor_dna": {
+          "format": "curry_plus_bread",
+          "method": "simmered",
+          "texture": [
+            "saucy",
+            "crispy"
+          ],
+          "taste": [
+            "savory",
+            "tangy"
+          ],
+          "meal_role": "main",
+          "protein": "chicken"
+        },
+        "spice_ref": 2,
+        "note": "Pub classic chicken in rich sauce with bread on the side"
+      },
+      {
+        "name": "Beer-Battered Flathead & Chips",
+        "flavor_dna": {
+          "format": "fried_snack",
+          "method": "fried",
+          "texture": [
+            "crispy",
+            "flaky"
+          ],
+          "taste": [
+            "savory",
+            "tangy",
+            "umami"
+          ],
+          "meal_role": "starter",
+          "protein": "fish"
+        },
+        "spice_ref": 1,
+        "note": "Crispy coastal fish with lemon"
+      },
+      {
+        "name": "Aussie Garlic Prawn Rice Bowl",
+        "flavor_dna": {
+          "format": "rice_dish",
+          "method": "simmered",
+          "texture": [
+            "fluffy",
+            "juicy"
+          ],
+          "taste": [
+            "savory",
+            "garlicky"
+          ],
+          "meal_role": "main",
+          "protein": "prawn"
+        },
+        "spice_ref": 2,
+        "note": "Coastal prawns over steamed rice"
+      },
+      {
+        "name": "Slow-Braised Lamb Shank & Damper",
+        "flavor_dna": {
+          "format": "curry_plus_bread",
+          "method": "simmered",
+          "texture": [
+            "tender",
+            "thick"
+          ],
+          "taste": [
+            "savory",
+            "smoky"
+          ],
+          "meal_role": "main",
+          "protein": "mutton"
+        },
+        "spice_ref": 2,
+        "note": "Rich braised lamb mopped up with warm bread"
+      },
+      {
+        "name": "Salt & Pepper Calamari",
+        "flavor_dna": {
+          "format": "fried_snack",
+          "method": "fried",
+          "texture": [
+            "crispy",
+            "snappy"
+          ],
+          "taste": [
+            "spicy",
+            "savory"
+          ],
+          "meal_role": "starter",
+          "protein": "prawn"
+        },
+        "spice_ref": 2,
+        "note": "Crunchy seafood starter"
+      },
+      {
+        "name": "Lamington Sponge",
+        "flavor_dna": {
+          "format": "dessert",
+          "method": "steamed",
+          "texture": [
+            "soft",
+            "juicy"
+          ],
+          "taste": [
+            "sweet",
+            "coconut"
+          ],
+          "meal_role": "dessert",
+          "protein": "veg"
+        },
+        "spice_ref": 1,
+        "note": "Coconut-coated sweet treat"
+      },
+      {
+        "name": "Iced Hibiscus & Lime Cooler",
+        "flavor_dna": {
+          "format": "soup_drink",
+          "method": "raw",
+          "texture": [
+            "light",
+            "refreshing"
+          ],
+          "taste": [
+            "sour",
+            "tangy",
+            "sweet"
+          ],
+          "meal_role": "drink",
+          "protein": "veg"
+        },
+        "spice_ref": 1,
+        "note": "Tart crimson summer refresher"
+      },
+      {
+        "name": "Sourdough Flatbread",
+        "flavor_dna": {
+          "format": "flatbread",
+          "method": "grilled",
+          "texture": [
+            "soft",
+            "chewy"
+          ],
+          "taste": [
+            "mild",
+            "toasty"
+          ],
+          "meal_role": "side",
+          "protein": "veg"
+        },
+        "spice_ref": 1,
+        "note": "Warm bread for dipping"
+      }
+    ]
+  },
+  {
+    "country": "UK",
+    "popular_dishes": [
+      {
+        "name": "Chicken Tikka Masala & Naan",
+        "flavor_dna": {
+          "format": "curry_plus_bread",
+          "method": "simmered",
+          "texture": [
+            "saucy",
+            "fluffy"
+          ],
+          "taste": [
+            "spicy",
+            "savory",
+            "tangy"
+          ],
+          "meal_role": "main",
+          "protein": "chicken"
+        },
+        "spice_ref": 3,
+        "note": "Britain's favorite curry-and-bread pairing"
+      },
+      {
+        "name": "Cod Fish & Chips",
+        "flavor_dna": {
+          "format": "fried_snack",
+          "method": "fried",
+          "texture": [
+            "crispy",
+            "flaky"
+          ],
+          "taste": [
+            "savory",
+            "umami"
+          ],
+          "meal_role": "starter",
+          "protein": "fish"
+        },
+        "spice_ref": 1,
+        "note": "Crisp battered white fish"
+      },
+      {
+        "name": "Kedgeree Spiced Seafood Rice",
+        "flavor_dna": {
+          "format": "rice_dish",
+          "method": "simmered",
+          "texture": [
+            "fluffy",
+            "tender"
+          ],
+          "taste": [
+            "savory",
+            "aromatic"
+          ],
+          "meal_role": "main",
+          "protein": "fish"
+        },
+        "spice_ref": 2,
+        "note": "Anglo-Indian spiced fish rice"
+      },
+      {
+        "name": "Lancashire Lamb Hotpot",
+        "flavor_dna": {
+          "format": "curry_plus_bread",
+          "method": "simmered",
+          "texture": [
+            "tender",
+            "thick"
+          ],
+          "taste": [
+            "savory",
+            "earthy"
+          ],
+          "meal_role": "main",
+          "protein": "mutton"
+        },
+        "spice_ref": 1,
+        "note": "Slow-cooked mutton stew"
+      },
+      {
+        "name": "Potted Morecambe Bay Shrimps",
+        "flavor_dna": {
+          "format": "stew",
+          "method": "simmered",
+          "texture": [
+            "saucy",
+            "juicy"
+          ],
+          "taste": [
+            "briny",
+            "savory"
+          ],
+          "meal_role": "main",
+          "protein": "prawn"
+        },
+        "spice_ref": 2,
+        "note": "Spiced coastal shrimp"
+      },
+      {
+        "name": "Steamed Treacle Pudding",
+        "flavor_dna": {
+          "format": "dessert",
+          "method": "steamed",
+          "texture": [
+            "soft",
+            "custardy"
+          ],
+          "taste": [
+            "sweet",
+            "milky"
+          ],
+          "meal_role": "dessert",
+          "protein": "veg"
+        },
+        "spice_ref": 1,
+        "note": "Warm steamed pudding"
+      },
+      {
+        "name": "Drop Scone Crumpet",
+        "flavor_dna": {
+          "format": "flatbread",
+          "method": "fried",
+          "texture": [
+            "spongy",
+            "crisp-edged"
+          ],
+          "taste": [
+            "mild",
+            "tangy"
+          ],
+          "meal_role": "side",
+          "protein": "veg"
+        },
+        "spice_ref": 1,
+        "note": "Griddled spongy bread"
+      },
+      {
+        "name": "Elderflower & Berry Cordial",
+        "flavor_dna": {
+          "format": "soup_drink",
+          "method": "raw",
+          "texture": [
+            "light",
+            "refreshing"
+          ],
+          "taste": [
+            "sweet",
+            "sour"
+          ],
+          "meal_role": "drink",
+          "protein": "veg"
+        },
+        "spice_ref": 1,
+        "note": "Floral tart drink"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "popular_dishes": [
+      {
+        "name": "Southern Smothered Chicken & Biscuits",
+        "flavor_dna": {
+          "format": "curry_plus_bread",
+          "method": "simmered",
+          "texture": [
+            "saucy",
+            "fluffy",
+            "crispy"
+          ],
+          "taste": [
+            "savory",
+            "spicy"
+          ],
+          "meal_role": "main",
+          "protein": "chicken"
+        },
+        "spice_ref": 2,
+        "note": "Spiced chicken gravy with fried/baked biscuits"
+      },
+      {
+        "name": "New Orleans Fried Catfish",
+        "flavor_dna": {
+          "format": "fried_snack",
+          "method": "fried",
+          "texture": [
+            "crispy",
+            "flaky"
+          ],
+          "taste": [
+            "spicy",
+            "tangy",
+            "savory"
+          ],
+          "meal_role": "starter",
+          "protein": "fish"
+        },
+        "spice_ref": 3,
+        "note": "Cornmeal-crusted coastal fish"
+      },
+      {
+        "name": "Cajun Shrimp Jambalaya",
+        "flavor_dna": {
+          "format": "rice_dish",
+          "method": "simmered",
+          "texture": [
+            "fluffy",
+            "tender"
+          ],
+          "taste": [
+            "spicy",
+            "savory",
+            "aromatic"
+          ],
+          "meal_role": "main",
+          "protein": "prawn"
+        },
+        "spice_ref": 3,
+        "note": "Spiced one-pot shrimp rice"
+      },
+      {
+        "name": "Texas Smoked Brisket Hash",
+        "flavor_dna": {
+          "format": "curry_plus_bread",
+          "method": "simmered",
+          "texture": [
+            "tender",
+            "thick"
+          ],
+          "taste": [
+            "smoky",
+            "savory",
+            "spicy"
+          ],
+          "meal_role": "main",
+          "protein": "mutton"
+        },
+        "spice_ref": 2,
+        "note": "Slow-cooked smoky meat"
+      },
+      {
+        "name": "Maryland Crab Stew",
+        "flavor_dna": {
+          "format": "curry_plus_bread",
+          "method": "simmered",
+          "texture": [
+            "saucy",
+            "sweet-meat"
+          ],
+          "taste": [
+            "briny",
+            "spicy"
+          ],
+          "meal_role": "main",
+          "protein": "crab"
+        },
+        "spice_ref": 3,
+        "note": "Old Bay spiced coastal crab"
+      },
+      {
+        "name": "Flapjack Griddle Cake",
+        "flavor_dna": {
+          "format": "flatbread",
+          "method": "fried",
+          "texture": [
+            "spongy",
+            "soft"
+          ],
+          "taste": [
+            "mild"
+          ],
+          "meal_role": "side",
+          "protein": "veg"
+        },
+        "spice_ref": 1,
+        "note": "Warm griddle pancake"
+      },
+      {
+        "name": "Baked Custard Flan",
+        "flavor_dna": {
+          "format": "dessert",
+          "method": "steamed",
+          "texture": [
+            "custardy",
+            "smooth"
+          ],
+          "taste": [
+            "sweet",
+            "milky"
+          ],
+          "meal_role": "dessert",
+          "protein": "veg"
+        },
+        "spice_ref": 1,
+        "note": "Silky milk custard"
+      },
+      {
+        "name": "Cranberry Lime Agua Fresca",
+        "flavor_dna": {
+          "format": "soup_drink",
+          "method": "raw",
+          "texture": [
+            "light",
+            "refreshing"
+          ],
+          "taste": [
+            "sour",
+            "tangy",
+            "sweet"
+          ],
+          "meal_role": "drink",
+          "protein": "veg"
+        },
+        "spice_ref": 1,
+        "note": "Tart ruby cooler"
+      }
+    ]
+  },
+  {
+    "country": "Germany",
+    "popular_dishes": [
+      {
+        "name": "Hühnerfrikassee mit Brötchen",
+        "flavor_dna": {
+          "format": "curry_plus_bread",
+          "method": "simmered",
+          "texture": [
+            "saucy",
+            "fluffy"
+          ],
+          "taste": [
+            "savory"
+          ],
+          "meal_role": "main",
+          "protein": "chicken"
+        },
+        "spice_ref": 1,
+        "note": "Braised chicken in rich sauce with bread"
+      },
+      {
+        "name": "Backfisch Crispy Fried Fish",
+        "flavor_dna": {
+          "format": "fried_snack",
+          "method": "fried",
+          "texture": [
+            "crispy",
+            "flaky"
+          ],
+          "taste": [
+            "savory",
+            "tangy"
+          ],
+          "meal_role": "starter",
+          "protein": "fish"
+        },
+        "spice_ref": 1,
+        "note": "North Sea crispy fried fish"
+      },
+      {
+        "name": "Lammgulasch Rich Lamb Stew",
+        "flavor_dna": {
+          "format": "curry_plus_bread",
+          "method": "simmered",
+          "texture": [
+            "tender",
+            "thick"
+          ],
+          "taste": [
+            "savory",
+            "smoky"
+          ],
+          "meal_role": "main",
+          "protein": "mutton"
+        },
+        "spice_ref": 2,
+        "note": "Paprika-spiced slow-cooked lamb"
+      },
+      {
+        "name": "Krabben-Reispfanne",
+        "flavor_dna": {
+          "format": "rice_dish",
+          "method": "simmered",
+          "texture": [
+            "fluffy",
+            "tender"
+          ],
+          "taste": [
+            "savory",
+            "briny"
+          ],
+          "meal_role": "main",
+          "protein": "prawn"
+        },
+        "spice_ref": 1,
+        "note": "North Sea shrimp rice skillet"
+      },
+      {
+        "name": "Kartoffelpuffer Flatcake",
+        "flavor_dna": {
+          "format": "flatbread",
+          "method": "fried",
+          "texture": [
+            "crispy",
+            "soft"
+          ],
+          "taste": [
+            "savory",
+            "mild"
+          ],
+          "meal_role": "side",
+          "protein": "veg"
+        },
+        "spice_ref": 1,
+        "note": "Griddled savory pancake"
+      },
+      {
+        "name": "Dampfnudel Steamed Sweet Bun",
+        "flavor_dna": {
+          "format": "dessert",
+          "method": "steamed",
+          "texture": [
+            "soft",
+            "juicy"
+          ],
+          "taste": [
+            "sweet",
+            "milky"
+          ],
+          "meal_role": "dessert",
+          "protein": "veg"
+        },
+        "spice_ref": 1,
+        "note": "Steamed sweet dumpling"
+      },
+      {
+        "name": "Erbseneintopf Pea Stew",
+        "flavor_dna": {
+          "format": "curry_plus_bread",
+          "method": "simmered",
+          "texture": [
+            "earthy",
+            "thick"
+          ],
+          "taste": [
+            "savory",
+            "earthy"
+          ],
+          "meal_role": "main",
+          "protein": "veg"
+        },
+        "spice_ref": 1,
+        "note": "Hearty field pea stew"
+      },
+      {
+        "name": "Johannisbeerschorle",
+        "flavor_dna": {
+          "format": "soup_drink",
+          "method": "raw",
+          "texture": [
+            "light",
+            "refreshing"
+          ],
+          "taste": [
+            "sour",
+            "tangy"
+          ],
+          "meal_role": "drink",
+          "protein": "veg"
+        },
+        "spice_ref": 1,
+        "note": "Tart redcurrant cooler"
+      }
+    ]
+  },
+  {
+    "country": "Japan",
+    "popular_dishes": [
+      {
+        "name": "Katsu Chicken Curry & Rice Bread",
+        "flavor_dna": {
+          "format": "curry_plus_bread",
+          "method": "simmered",
+          "texture": [
+            "saucy",
+            "crispy"
+          ],
+          "taste": [
+            "savory",
+            "spicy"
+          ],
+          "meal_role": "main",
+          "protein": "chicken"
+        },
+        "spice_ref": 2,
+        "note": "Spiced chicken curry with crispy fried accompaniment"
+      },
+      {
+        "name": "Aji Fry Horse Mackerel",
+        "flavor_dna": {
+          "format": "fried_snack",
+          "method": "fried",
+          "texture": [
+            "crispy",
+            "flaky"
+          ],
+          "taste": [
+            "umami",
+            "savory"
+          ],
+          "meal_role": "starter",
+          "protein": "fish"
+        },
+        "spice_ref": 1,
+        "note": "Panko-crusted whole mackerel"
+      },
+      {
+        "name": "Ebi Pilaf Prawn Rice",
+        "flavor_dna": {
+          "format": "rice_dish",
+          "method": "simmered",
+          "texture": [
+            "fluffy",
+            "tender"
+          ],
+          "taste": [
+            "savory",
+            "umami"
+          ],
+          "meal_role": "main",
+          "protein": "prawn"
+        },
+        "spice_ref": 1,
+        "note": "Aromatic shrimp rice"
+      },
+      {
+        "name": "Asari Sakamushi Steamed Clams",
+        "flavor_dna": {
+          "format": "stew",
+          "method": "simmered",
+          "texture": [
+            "chewy",
+            "saucy"
+          ],
+          "taste": [
+            "briny",
+            "umami"
+          ],
+          "meal_role": "main",
+          "protein": "prawn"
+        },
+        "spice_ref": 1,
+        "note": "Coastal clams in aromatic broth"
+      },
+      {
+        "name": "Daifuku Steamed Rice Mochi",
+        "flavor_dna": {
+          "format": "dessert",
+          "method": "steamed",
+          "texture": [
+            "soft",
+            "juicy"
+          ],
+          "taste": [
+            "sweet"
+          ],
+          "meal_role": "dessert",
+          "protein": "veg"
+        },
+        "spice_ref": 1,
+        "note": "Steamed rice-flour sweet dumpling"
+      },
+      {
+        "name": "Purin Steamed Milk Custard",
+        "flavor_dna": {
+          "format": "dessert",
+          "method": "steamed",
+          "texture": [
+            "custardy",
+            "smooth"
+          ],
+          "taste": [
+            "sweet",
+            "milky"
+          ],
+          "meal_role": "dessert",
+          "protein": "veg"
+        },
+        "spice_ref": 1,
+        "note": "Silky caramel milk pudding"
+      },
+      {
+        "name": "Gohan Sticky Short-Grain Rice",
+        "flavor_dna": {
+          "format": "rice_dish",
+          "method": "steamed",
+          "texture": [
+            "sticky",
+            "soft"
+          ],
+          "taste": [
+            "mild",
+            "floral"
+          ],
+          "meal_role": "side",
+          "protein": "veg"
+        },
+        "spice_ref": 1,
+        "note": "Steamed sticky rice"
+      },
+      {
+        "name": "Shiso Ume Cooler",
+        "flavor_dna": {
+          "format": "soup_drink",
+          "method": "raw",
+          "texture": [
+            "light",
+            "refreshing"
+          ],
+          "taste": [
+            "sour",
+            "tangy",
+            "sweet"
+          ],
+          "meal_role": "drink",
+          "protein": "veg"
+        },
+        "spice_ref": 1,
+        "note": "Tart red plum refresher"
+      }
+    ]
+  }
+]

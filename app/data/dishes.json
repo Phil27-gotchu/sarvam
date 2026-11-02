@@ -1,0 +1,1361 @@
+[
+  {
+    "id": "kombdi-vade",
+    "name_mr": "कोंबडी वडे",
+    "name_roman": "Kombdi Vade",
+    "aliases": [
+      "Komdi Vade",
+      "Malvani Chicken Vade"
+    ],
+    "phonetic": "kom-bdee vah-day",
+    "description": "Signature Malwani spicy coconut-roasted chicken curry served with fluffy fried multigrain-rice puris (vade).",
+    "veg": false,
+    "spice": 4,
+    "richness": 4,
+    "ingredients": [
+      "chicken",
+      "coconut",
+      "malvani masala",
+      "rice flour",
+      "urad dal",
+      "coriander seeds",
+      "red chili"
+    ],
+    "allergens": [
+      "coconut",
+      "gluten"
+    ],
+    "pairs_with": [
+      "sol-kadhi",
+      "indrayani-bhaat"
+    ],
+    "flavor_dna": {
+      "format": "curry_plus_bread",
+      "method": "simmered",
+      "texture": [
+        "saucy",
+        "fluffy",
+        "crispy"
+      ],
+      "taste": [
+        "spicy",
+        "coconut",
+        "savory",
+        "earthy"
+      ],
+      "meal_role": "main",
+      "protein": "chicken"
+    },
+    "verified": false
+  },
+  {
+    "id": "bombil-fry",
+    "name_mr": "बोंबील फ्राय",
+    "name_roman": "Bombil Fry",
+    "aliases": [
+      "Bombay Duck Fry",
+      "Crispy Bombil"
+    ],
+    "phonetic": "bom-beel fry",
+    "description": "Delicate Bombay duck fish marinated in kokum, chili and turmeric, coated in rava-rice flour for a shatter-crisp crust and custardy center.",
+    "veg": false,
+    "spice": 3,
+    "richness": 3,
+    "ingredients": [
+      "bombil fish",
+      "semolina",
+      "rice flour",
+      "kokum",
+      "red chili",
+      "garlic",
+      "turmeric"
+    ],
+    "allergens": [
+      "fish",
+      "gluten"
+    ],
+    "pairs_with": [
+      "sol-kadhi",
+      "malvani-fish-curry"
+    ],
+    "flavor_dna": {
+      "format": "fried_snack",
+      "method": "fried",
+      "texture": [
+        "crispy",
+        "soft",
+        "flaky"
+      ],
+      "taste": [
+        "tangy",
+        "spicy",
+        "umami",
+        "savory"
+      ],
+      "meal_role": "starter",
+      "protein": "fish"
+    },
+    "verified": false
+  },
+  {
+    "id": "tisrya-masala",
+    "name_mr": "तिसऱ्या मसाला",
+    "name_roman": "Tisrya Masala",
+    "aliases": [
+      "Clams Sukka",
+      "Tisrya Sukka"
+    ],
+    "phonetic": "tees-ryah mah-sah-lah",
+    "description": "Coastal clams cooked on the half-shell in toasted coconut, onion, garlic, and tirphal (Sichuan-like berry) masala.",
+    "veg": false,
+    "spice": 4,
+    "richness": 4,
+    "ingredients": [
+      "clams",
+      "coconut",
+      "onion",
+      "garlic",
+      "tirphal",
+      "kokum",
+      "malvani masala"
+    ],
+    "allergens": [
+      "shellfish",
+      "coconut"
+    ],
+    "pairs_with": [
+      "ghavne",
+      "bhakri-tandul"
+    ],
+    "flavor_dna": {
+      "format": "stew",
+      "method": "simmered",
+      "texture": [
+        "chewy",
+        "coarse",
+        "saucy"
+      ],
+      "taste": [
+        "briny",
+        "coconut",
+        "spicy",
+        "tangy"
+      ],
+      "meal_role": "main",
+      "protein": "prawn"
+    },
+    "verified": false
+  },
+  {
+    "id": "sol-kadhi",
+    "name_mr": "सोलकढी",
+    "name_roman": "Sol Kadhi",
+    "aliases": [
+      "Solkadhi",
+      "Kokum Coconut Cooler"
+    ],
+    "phonetic": "sohl kuh-dhee",
+    "description": "Chilled pink digestive drink of fresh coconut milk infused with tangy kokum, garlic, green chili, and cumin.",
+    "veg": true,
+    "spice": 2,
+    "richness": 2,
+    "ingredients": [
+      "coconut milk",
+      "kokum",
+      "garlic",
+      "green chili",
+      "cumin",
+      "coriander"
+    ],
+    "allergens": [
+      "coconut"
+    ],
+    "pairs_with": [
+      "kombdi-vade",
+      "malvani-fish-curry",
+      "kolambi-bhaat"
+    ],
+    "flavor_dna": {
+      "format": "soup_drink",
+      "method": "raw",
+      "texture": [
+        "silky",
+        "light"
+      ],
+      "taste": [
+        "sour",
+        "coconut",
+        "tangy",
+        "garlicky"
+      ],
+      "meal_role": "drink",
+      "protein": "veg"
+    },
+    "verified": false
+  },
+  {
+    "id": "malvani-fish-curry",
+    "name_mr": "मालवणी मासळी रस्सा",
+    "name_roman": "Malvani Fish Curry",
+    "aliases": [
+      "Surmai Kalwan",
+      "Bangda Tikhle"
+    ],
+    "phonetic": "mahl-vuh-nee mahs-lee ruh-ssah",
+    "description": "Fiery orange-red coconut and Bedgi chili fish gravy soured with kokum petals and scented with tirphal.",
+    "veg": false,
+    "spice": 5,
+    "richness": 4,
+    "ingredients": [
+      "surmai fish",
+      "coconut",
+      "bedgi chili",
+      "kokum",
+      "tirphal",
+      "garlic",
+      "coriander"
+    ],
+    "allergens": [
+      "fish",
+      "coconut"
+    ],
+    "pairs_with": [
+      "indrayani-bhaat",
+      "sol-kadhi",
+      "bhakri-tandul"
+    ],
+    "flavor_dna": {
+      "format": "curry_plus_bread",
+      "method": "simmered",
+      "texture": [
+        "silky",
+        "flaky"
+      ],
+      "taste": [
+        "spicy",
+        "sour",
+        "coconut",
+        "umami"
+      ],
+      "meal_role": "main",
+      "protein": "fish"
+    },
+    "verified": false
+  },
+  {
+    "id": "kolambi-bhaat",
+    "name_mr": "कोळंबी भात",
+    "name_roman": "Kolambi Bhaat",
+    "aliases": [
+      "Malvani Prawn Pulao",
+      "Prawn Rice"
+    ],
+    "phonetic": "koh-lum-bee bhaat",
+    "description": "Fragrant one-pot rice simmered in coconut milk with juicy prawns, whole spices, and Malwani masala.",
+    "veg": false,
+    "spice": 3,
+    "richness": 4,
+    "ingredients": [
+      "prawns",
+      "basmati rice",
+      "coconut milk",
+      "malvani masala",
+      "onion",
+      "ghee",
+      "cloves"
+    ],
+    "allergens": [
+      "shellfish",
+      "coconut",
+      "dairy"
+    ],
+    "pairs_with": [
+      "sol-kadhi",
+      "papad-fry"
+    ],
+    "flavor_dna": {
+      "format": "rice_dish",
+      "method": "simmered",
+      "texture": [
+        "fluffy",
+        "tender"
+      ],
+      "taste": [
+        "coconut",
+        "savory",
+        "aromatic",
+        "spicy"
+      ],
+      "meal_role": "main",
+      "protein": "prawn"
+    },
+    "verified": false
+  },
+  {
+    "id": "ghavne",
+    "name_mr": "घावणे",
+    "name_roman": "Ghavne",
+    "aliases": [
+      "Neer Dosa Malvani",
+      "Rice Crepes"
+    ],
+    "phonetic": "ghahv-nay",
+    "description": "Lacy, paper-thin steamed crepes poured from stone-ground rice batter — naturally gluten-free when pure rice, ideal for mopping curries.",
+    "veg": true,
+    "spice": 1,
+    "richness": 1,
+    "ingredients": [
+      "rice",
+      "salt",
+      "water",
+      "oil"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "pairs_with": [
+      "kombdi-vade",
+      "tisrya-masala",
+      "ras-ghavne"
+    ],
+    "flavor_dna": {
+      "format": "flatbread",
+      "method": "steamed",
+      "texture": [
+        "soft",
+        "lacy",
+        "light"
+      ],
+      "taste": [
+        "mild",
+        "neutral"
+      ],
+      "meal_role": "side",
+      "protein": "veg"
+    },
+    "verified": false
+  },
+  {
+    "id": "kharvas",
+    "name_mr": "खरवस",
+    "name_roman": "Kharvas",
+    "aliases": [
+      "Junnu",
+      "Colostrum Pudding"
+    ],
+    "phonetic": "khur-vus",
+    "description": "Silky steamed milk pudding sweetened with jaggery and scented with cardamom and nutmeg.",
+    "veg": true,
+    "spice": 1,
+    "richness": 4,
+    "ingredients": [
+      "milk",
+      "colostrum milk",
+      "jaggery",
+      "cardamom",
+      "nutmeg"
+    ],
+    "allergens": [
+      "dairy"
+    ],
+    "pairs_with": [
+      "ghavne"
+    ],
+    "flavor_dna": {
+      "format": "dessert",
+      "method": "steamed",
+      "texture": [
+        "custardy",
+        "smooth"
+      ],
+      "taste": [
+        "sweet",
+        "milky",
+        "aromatic"
+      ],
+      "meal_role": "dessert",
+      "protein": "veg"
+    },
+    "verified": false
+  },
+  {
+    "id": "mutton-sukka",
+    "name_mr": "मटण सुक्कं",
+    "name_roman": "Mutton Sukka",
+    "aliases": [
+      "Malvani Dry Mutton"
+    ],
+    "phonetic": "muh-tun sook-kah",
+    "description": "Slow-braised bone-in goat tossed in darkly roasted dry coconut, black pepper, and garam spices until thick and clingy.",
+    "veg": false,
+    "spice": 4,
+    "richness": 5,
+    "ingredients": [
+      "mutton",
+      "dry coconut",
+      "onion",
+      "ginger",
+      "garlic",
+      "malvani masala",
+      "poppy seeds"
+    ],
+    "allergens": [
+      "coconut"
+    ],
+    "pairs_with": [
+      "bhakri-tandul",
+      "vade",
+      "sol-kadhi"
+    ],
+    "flavor_dna": {
+      "format": "curry_plus_bread",
+      "method": "simmered",
+      "texture": [
+        "tender",
+        "coarse",
+        "thick"
+      ],
+      "taste": [
+        "smoky",
+        "spicy",
+        "coconut",
+        "savory"
+      ],
+      "meal_role": "main",
+      "protein": "mutton"
+    },
+    "verified": false
+  },
+  {
+    "id": "ukadiche-modak",
+    "name_mr": "उकडीचे मोदक",
+    "name_roman": "Ukadiche Modak",
+    "aliases": [
+      "Steamed Modak",
+      "Coconut Jaggery Dumpling"
+    ],
+    "phonetic": "oo-kuh-dee-chay moh-duk",
+    "description": "Pleated steamed rice-flour dumplings filled with warm fresh coconut, jaggery, cardamom, and a drizzle of ghee.",
+    "veg": true,
+    "spice": 1,
+    "richness": 4,
+    "ingredients": [
+      "rice flour",
+      "fresh coconut",
+      "jaggery",
+      "ghee",
+      "cardamom",
+      "poppy seeds"
+    ],
+    "allergens": [
+      "coconut",
+      "dairy",
+      "gluten"
+    ],
+    "pairs_with": [
+      "kharvas"
+    ],
+    "flavor_dna": {
+      "format": "dessert",
+      "method": "steamed",
+      "texture": [
+        "soft",
+        "juicy"
+      ],
+      "taste": [
+        "sweet",
+        "coconut",
+        "floral"
+      ],
+      "meal_role": "dessert",
+      "protein": "veg"
+    },
+    "verified": false
+  },
+  {
+    "id": "surmai-fry",
+    "name_mr": "सुरमई फ्राय",
+    "name_roman": "Surmai Fry",
+    "aliases": [
+      "Kingfish Rava Fry"
+    ],
+    "phonetic": "soor-muh-ee fry",
+    "description": "Thick kingfish steaks rubbed with kokum agal and red chili paste, pan-seared in a crunchy semolina crust.",
+    "veg": false,
+    "spice": 3,
+    "richness": 3,
+    "ingredients": [
+      "surmai fish",
+      "semolina",
+      "rice flour",
+      "kokum",
+      "red chili",
+      "garlic",
+      "turmeric"
+    ],
+    "allergens": [
+      "fish",
+      "gluten"
+    ],
+    "pairs_with": [
+      "sol-kadhi",
+      "malvani-fish-curry"
+    ],
+    "flavor_dna": {
+      "format": "fried_snack",
+      "method": "fried",
+      "texture": [
+        "crispy",
+        "meaty"
+      ],
+      "taste": [
+        "spicy",
+        "tangy",
+        "umami"
+      ],
+      "meal_role": "starter",
+      "protein": "fish"
+    },
+    "verified": false
+  },
+  {
+    "id": "bangda-fry",
+    "name_mr": "बांगडा फ्राय",
+    "name_roman": "Bangda Fry",
+    "aliases": [
+      "Mackerel Fry",
+      "Stuffed Bangda"
+    ],
+    "phonetic": "baang-dah fry",
+    "description": "Whole Indian mackerel scored and stuffed with green-chili cilantro coconut masala, shallow-fried crisp.",
+    "veg": false,
+    "spice": 4,
+    "richness": 3,
+    "ingredients": [
+      "bangda mackerel",
+      "coconut",
+      "green chili",
+      "garlic",
+      "kokum",
+      "semolina"
+    ],
+    "allergens": [
+      "fish",
+      "coconut",
+      "gluten"
+    ],
+    "pairs_with": [
+      "sol-kadhi",
+      "bhakri-tandul"
+    ],
+    "flavor_dna": {
+      "format": "fried_snack",
+      "method": "fried",
+      "texture": [
+        "crispy",
+        "rich"
+      ],
+      "taste": [
+        "spicy",
+        "tangy",
+        "oily",
+        "umami"
+      ],
+      "meal_role": "starter",
+      "protein": "fish"
+    },
+    "verified": false
+  },
+  {
+    "id": "paplet-fry",
+    "name_mr": "पापलेट फ्राय",
+    "name_roman": "Paplet Fry",
+    "aliases": [
+      "Pomfret Rava Fry"
+    ],
+    "phonetic": "pahp-let fry",
+    "description": "Delicate silver pomfret coated in spiced semolina and pan-fried golden.",
+    "veg": false,
+    "spice": 3,
+    "richness": 3,
+    "ingredients": [
+      "pomfret",
+      "semolina",
+      "kokum",
+      "garlic",
+      "chili powder"
+    ],
+    "allergens": [
+      "fish",
+      "gluten"
+    ],
+    "pairs_with": [
+      "sol-kadhi"
+    ],
+    "flavor_dna": {
+      "format": "fried_snack",
+      "method": "fried",
+      "texture": [
+        "crispy",
+        "flaky"
+      ],
+      "taste": [
+        "mild",
+        "tangy",
+        "savory"
+      ],
+      "meal_role": "starter",
+      "protein": "fish"
+    },
+    "verified": false
+  },
+  {
+    "id": "kolambi-masala",
+    "name_mr": "कोळंबी मसाला",
+    "name_roman": "Kolambi Masala",
+    "aliases": [
+      "Prawn Masala",
+      "Malvani Shrimp Curry"
+    ],
+    "phonetic": "koh-lum-bee mah-sah-lah",
+    "description": "Plump coastal prawns simmered in a thick onion-tomato-roasted coconut gravy with kokum tang.",
+    "veg": false,
+    "spice": 4,
+    "richness": 4,
+    "ingredients": [
+      "prawns",
+      "coconut",
+      "onion",
+      "tomato",
+      "kokum",
+      "malvani masala"
+    ],
+    "allergens": [
+      "shellfish",
+      "coconut"
+    ],
+    "pairs_with": [
+      "bhakri-tandul",
+      "ghavne",
+      "sol-kadhi"
+    ],
+    "flavor_dna": {
+      "format": "curry_plus_bread",
+      "method": "simmered",
+      "texture": [
+        "saucy",
+        "juicy"
+      ],
+      "taste": [
+        "spicy",
+        "tangy",
+        "coconut"
+      ],
+      "meal_role": "main",
+      "protein": "prawn"
+    },
+    "verified": false
+  },
+  {
+    "id": "kolambi-fry",
+    "name_mr": "कोळंबी फ्राय",
+    "name_roman": "Kolambi Fry",
+    "aliases": [
+      "Crispy Prawns",
+      "Rava Prawn Fry"
+    ],
+    "phonetic": "koh-lum-bee fry",
+    "description": "Prawns marinated in garlic-kokum chili paste and tossed in rava for a crunchy coastal starter.",
+    "veg": false,
+    "spice": 3,
+    "richness": 3,
+    "ingredients": [
+      "prawns",
+      "semolina",
+      "rice flour",
+      "garlic",
+      "kokum",
+      "chili"
+    ],
+    "allergens": [
+      "shellfish",
+      "gluten"
+    ],
+    "pairs_with": [
+      "sol-kadhi"
+    ],
+    "flavor_dna": {
+      "format": "fried_snack",
+      "method": "fried",
+      "texture": [
+        "crispy",
+        "snappy"
+      ],
+      "taste": [
+        "spicy",
+        "tangy",
+        "savory"
+      ],
+      "meal_role": "starter",
+      "protein": "prawn"
+    },
+    "verified": false
+  },
+  {
+    "id": "kurlya-masala",
+    "name_mr": "कुर्ल्या मसाला",
+    "name_roman": "Kurlya Masala",
+    "aliases": [
+      "Malvani Crab Curry",
+      "Chimbori Rassa"
+    ],
+    "phonetic": "koor-lyah mah-sah-lah",
+    "description": "Sweet mud crab cracked and simmered in darkly roasted coconut and fennel-spiced Malwani rassa.",
+    "veg": false,
+    "spice": 5,
+    "richness": 4,
+    "ingredients": [
+      "crab",
+      "coconut",
+      "malvani masala",
+      "onion",
+      "garlic",
+      "kokum"
+    ],
+    "allergens": [
+      "shellfish",
+      "coconut"
+    ],
+    "pairs_with": [
+      "bhakri-tandul",
+      "indrayani-bhaat"
+    ],
+    "flavor_dna": {
+      "format": "curry_plus_bread",
+      "method": "simmered",
+      "texture": [
+        "saucy",
+        "sweet-meat"
+      ],
+      "taste": [
+        "spicy",
+        "coconut",
+        "briny"
+      ],
+      "meal_role": "main",
+      "protein": "crab"
+    },
+    "verified": false
+  },
+  {
+    "id": "mori-masala",
+    "name_mr": "मोरी मसाला",
+    "name_roman": "Mori Masala",
+    "aliases": [
+      "Baby Shark Sukka"
+    ],
+    "phonetic": "moh-ree mah-sah-lah",
+    "description": "Boneless flakes of coastal shark cooked dry with grated coconut, kokum, garlic, and Malwani spice blend.",
+    "veg": false,
+    "spice": 4,
+    "richness": 3,
+    "ingredients": [
+      "shark fish",
+      "coconut",
+      "garlic",
+      "kokum",
+      "malvani masala"
+    ],
+    "allergens": [
+      "fish",
+      "coconut"
+    ],
+    "pairs_with": [
+      "bhakri-tandul",
+      "sol-kadhi"
+    ],
+    "flavor_dna": {
+      "format": "stew",
+      "method": "simmered",
+      "texture": [
+        "flaky",
+        "coarse"
+      ],
+      "taste": [
+        "spicy",
+        "coconut",
+        "tangy"
+      ],
+      "meal_role": "main",
+      "protein": "fish"
+    },
+    "verified": false
+  },
+  {
+    "id": "jawla-kशिंब",
+    "name_mr": "जवळा कोशिंबीर",
+    "name_roman": "Jawla Koshimbir",
+    "aliases": [
+      "Dry Baby Shrimp Salad",
+      "Suka Jawla"
+    ],
+    "phonetic": "juhv-lah koh-shim-beer",
+    "description": "Toasted tiny dried shrimp tossed with raw onion, green chili, cilantro, coconut, and lime.",
+    "veg": false,
+    "spice": 3,
+    "richness": 2,
+    "ingredients": [
+      "dried baby shrimp",
+      "onion",
+      "coconut",
+      "green chili",
+      "lemon",
+      "coriander"
+    ],
+    "allergens": [
+      "shellfish",
+      "coconut"
+    ],
+    "pairs_with": [
+      "bhakri-tandul",
+      "malvani-fish-curry"
+    ],
+    "flavor_dna": {
+      "format": "salad_side",
+      "method": "roasted",
+      "texture": [
+        "crunchy",
+        "crisp"
+      ],
+      "taste": [
+        "umami",
+        "tangy",
+        "spicy"
+      ],
+      "meal_role": "side",
+      "protein": "prawn"
+    },
+    "verified": false
+  },
+  {
+    "id": "kaju-chi-usal",
+    "name_mr": "ओल्या काजूची उसळ",
+    "name_roman": "Kaju Chi Usal",
+    "aliases": [
+      "Tender Cashew Curry",
+      "Malvani Kaju Masala"
+    ],
+    "phonetic": "kah-joo chee oo-sul",
+    "description": "Seasonal tender cashews simmered with white peas in a fragrant coconut and goda-malvani gravy.",
+    "veg": true,
+    "spice": 3,
+    "richness": 4,
+    "ingredients": [
+      "cashews",
+      "coconut",
+      "white peas",
+      "onion",
+      "malvani masala",
+      "garlic"
+    ],
+    "allergens": [
+      "tree_nut",
+      "coconut"
+    ],
+    "pairs_with": [
+      "vade",
+      "ghavne",
+      "bhakri-tandul"
+    ],
+    "flavor_dna": {
+      "format": "curry_plus_bread",
+      "method": "simmered",
+      "texture": [
+        "creamy",
+        "nutty"
+      ],
+      "taste": [
+        "savory",
+        "coconut",
+        "mildly-spicy"
+      ],
+      "meal_role": "main",
+      "protein": "veg"
+    },
+    "verified": false
+  },
+  {
+    "id": "kala-vatana-sambhar",
+    "name_mr": "काळ्या वाटाण्याचा सांबार",
+    "name_roman": "Kala Vatana Sambhar",
+    "aliases": [
+      "Black Pea Malvani Curry",
+      "Usal Rassa"
+    ],
+    "phonetic": "kah-lah vuh-tah-nah sahm-bhar",
+    "description": "Hearty black field peas slow-cooked in roasted coconut, onion, and warm coastal spices.",
+    "veg": true,
+    "spice": 3,
+    "richness": 3,
+    "ingredients": [
+      "black peas",
+      "coconut",
+      "onion",
+      "garlic",
+      "malvani masala",
+      "kokum"
+    ],
+    "allergens": [
+      "coconut"
+    ],
+    "pairs_with": [
+      "vade",
+      "amboli",
+      "indrayani-bhaat"
+    ],
+    "flavor_dna": {
+      "format": "curry_plus_bread",
+      "method": "simmered",
+      "texture": [
+        "earthy",
+        "saucy"
+      ],
+      "taste": [
+        "savory",
+        "coconut",
+        "earthy"
+      ],
+      "meal_role": "main",
+      "protein": "veg"
+    },
+    "verified": false
+  },
+  {
+    "id": "kulith-pithla",
+    "name_mr": "कुळीथ पिठलं",
+    "name_roman": "Kulith Pithla",
+    "aliases": [
+      "Horsegram Flour Curry"
+    ],
+    "phonetic": "koo-leeth peeth-lah",
+    "description": "Rustic coastal comfort porridge of toasted horsegram flour whisked with garlic, green chili, and kokum.",
+    "veg": true,
+    "spice": 3,
+    "richness": 3,
+    "ingredients": [
+      "horsegram flour",
+      "garlic",
+      "green chili",
+      "kokum",
+      "turmeric",
+      "oil"
+    ],
+    "allergens": [],
+    "pairs_with": [
+      "bhakri-tandul",
+      "indrayani-bhaat"
+    ],
+    "flavor_dna": {
+      "format": "stew",
+      "method": "simmered",
+      "texture": [
+        "velvety",
+        "thick"
+      ],
+      "taste": [
+        "earthy",
+        "tangy",
+        "garlicky"
+      ],
+      "meal_role": "main",
+      "protein": "veg"
+    },
+    "verified": false
+  },
+  {
+    "id": "amboli",
+    "name_mr": "आंबोळी",
+    "name_roman": "Amboli",
+    "aliases": [
+      "Fermented Rice Uthappam"
+    ],
+    "phonetic": "ahm-boh-lee",
+    "description": "Thick, spongy fermented rice-and-lentil griddle pancake with crisp edges — beloved Malwani breakfast or curry partner.",
+    "veg": true,
+    "spice": 1,
+    "richness": 2,
+    "ingredients": [
+      "rice",
+      "urad dal",
+      "fenugreek",
+      "salt",
+      "oil"
+    ],
+    "allergens": [],
+    "pairs_with": [
+      "kala-vatana-sambhar",
+      "kombdi-vade",
+      "shengdana-chutney"
+    ],
+    "flavor_dna": {
+      "format": "flatbread",
+      "method": "fried",
+      "texture": [
+        "spongy",
+        "crisp-edged"
+      ],
+      "taste": [
+        "tangy",
+        "mild"
+      ],
+      "meal_role": "side",
+      "protein": "veg"
+    },
+    "verified": false
+  },
+  {
+    "id": "bhakri-tandul",
+    "name_mr": "तांदळाची भाकरी",
+    "name_roman": "Tandlachi Bhakri",
+    "aliases": [
+      "Rice Flour Flatbread"
+    ],
+    "phonetic": "tahnd-lah-chee bhah-kree",
+    "description": "Soft, hand-patted unleavened rice-flour flatbread puffed over an open flame — completely gluten-free.",
+    "veg": true,
+    "spice": 1,
+    "richness": 1,
+    "ingredients": [
+      "rice flour",
+      "water",
+      "salt"
+    ],
+    "allergens": [],
+    "pairs_with": [
+      "mutton-sukka",
+      "malvani-fish-curry",
+      "kulith-pithla"
+    ],
+    "flavor_dna": {
+      "format": "flatbread",
+      "method": "grilled",
+      "texture": [
+        "soft",
+        "chewy"
+      ],
+      "taste": [
+        "mild",
+        "toasty"
+      ],
+      "meal_role": "side",
+      "protein": "veg"
+    },
+    "verified": false
+  },
+  {
+    "id": "vade",
+    "name_mr": "मालवणी वडे",
+    "name_roman": "Malvani Vade",
+    "aliases": [
+      "Komdi Vade Puri"
+    ],
+    "phonetic": "mahl-vuh-nee vah-day",
+    "description": "Spiced, golden-puffed fried bread made of rice flour, urad dal, wheat, coriander seed, and fenugreek.",
+    "veg": true,
+    "spice": 2,
+    "richness": 4,
+    "ingredients": [
+      "rice flour",
+      "urad dal",
+      "wheat flour",
+      "coriander seeds",
+      "cumin",
+      "turmeric",
+      "oil"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "pairs_with": [
+      "kombdi-vade",
+      "mutton-sukka",
+      "kala-vatana-sambhar"
+    ],
+    "flavor_dna": {
+      "format": "flatbread",
+      "method": "fried",
+      "texture": [
+        "fluffy",
+        "crispy"
+      ],
+      "taste": [
+        "savory",
+        "spiced"
+      ],
+      "meal_role": "side",
+      "protein": "veg"
+    },
+    "verified": false
+  },
+  {
+    "id": "indrayani-bhaat",
+    "name_mr": "इंद्रायणी भात",
+    "name_roman": "Indrayani Bhaat",
+    "aliases": [
+      "Steamed Sticky Rice"
+    ],
+    "phonetic": "in-drah-yuh-nee bhaat",
+    "description": "Aromatic heirloom Western Ghats sticky rice steamed soft to soak up coastal fish and chicken gravies.",
+    "veg": true,
+    "spice": 1,
+    "richness": 2,
+    "ingredients": [
+      "indrayani rice",
+      "water",
+      "salt"
+    ],
+    "allergens": [],
+    "pairs_with": [
+      "malvani-fish-curry",
+      "kombdi-vade",
+      "sol-kadhi"
+    ],
+    "flavor_dna": {
+      "format": "rice_dish",
+      "method": "steamed",
+      "texture": [
+        "sticky",
+        "soft"
+      ],
+      "taste": [
+        "floral",
+        "mild"
+      ],
+      "meal_role": "side",
+      "protein": "veg"
+    },
+    "verified": false
+  },
+  {
+    "id": "shengdana-chutney",
+    "name_mr": "शेंगदाणा चटणी",
+    "name_roman": "Shengdana Chutney",
+    "aliases": [
+      "Dry Peanut Garlic Chutney",
+      "Malvani Groundnut Chutney"
+    ],
+    "phonetic": "sheng-dah-nah chut-nee",
+    "description": "Pungent dry-pounded roasted peanut, garlic, cumin, and red chili condiment served alongside bhakri and thalis.",
+    "veg": true,
+    "spice": 4,
+    "richness": 3,
+    "ingredients": [
+      "peanuts",
+      "garlic",
+      "red chili",
+      "cumin",
+      "salt",
+      "sesame"
+    ],
+    "allergens": [
+      "peanut",
+      "sesame"
+    ],
+    "pairs_with": [
+      "bhakri-tandul",
+      "amboli",
+      "kulith-pithla"
+    ],
+    "flavor_dna": {
+      "format": "pickle_condiment",
+      "method": "roasted",
+      "texture": [
+        "coarse",
+        "crunchy"
+      ],
+      "taste": [
+        "nutty",
+        "spicy",
+        "garlicky"
+      ],
+      "meal_role": "side",
+      "protein": "veg"
+    },
+    "verified": false
+  },
+  {
+    "id": "phanas-bhaji",
+    "name_mr": "फणसाची भाजी",
+    "name_roman": "Phanas Bhaji",
+    "aliases": [
+      "Raw Jackfruit Coconut Stir-fry"
+    ],
+    "phonetic": "fuh-nus bhah-jee",
+    "description": "Tender shredded green jackfruit steamed and tossed with mustard seeds, curry leaves, fresh coconut, and groundnuts.",
+    "veg": true,
+    "spice": 2,
+    "richness": 3,
+    "ingredients": [
+      "raw jackfruit",
+      "coconut",
+      "peanuts",
+      "mustard seeds",
+      "green chili",
+      "turmeric"
+    ],
+    "allergens": [
+      "coconut",
+      "peanut"
+    ],
+    "pairs_with": [
+      "bhakri-tandul",
+      "sol-kadhi"
+    ],
+    "flavor_dna": {
+      "format": "stew",
+      "method": "steamed",
+      "texture": [
+        "fibrous",
+        "meaty"
+      ],
+      "taste": [
+        "mild",
+        "coconut",
+        "nutty"
+      ],
+      "meal_role": "side",
+      "protein": "veg"
+    },
+    "verified": false
+  },
+  {
+    "id": "kokum-sarbat",
+    "name_mr": "कोकम सरबत",
+    "name_roman": "Kokum Sarbat",
+    "aliases": [
+      "Amritsol",
+      "Spiced Kokum Cooler"
+    ],
+    "phonetic": "koh-kum sur-but",
+    "description": "Ruby-red sweet-tart refresher brewed from sun-dried kokum rind, sugar, roasted cumin, and black salt.",
+    "veg": true,
+    "spice": 1,
+    "richness": 1,
+    "ingredients": [
+      "kokum syrup",
+      "water",
+      "cumin",
+      "black salt",
+      "sugar"
+    ],
+    "allergens": [],
+    "pairs_with": [
+      "bombil-fry",
+      "surmai-fry"
+    ],
+    "flavor_dna": {
+      "format": "soup_drink",
+      "method": "raw",
+      "texture": [
+        "light",
+        "refreshing"
+      ],
+      "taste": [
+        "sour",
+        "sweet",
+        "tangy"
+      ],
+      "meal_role": "drink",
+      "protein": "veg"
+    },
+    "verified": false
+  },
+  {
+    "id": "ras-ghavne",
+    "name_mr": "रस घावणे",
+    "name_roman": "Ras Ghavne",
+    "aliases": [
+      "Ghavne with Sweet Coconut Milk"
+    ],
+    "phonetic": "rus ghahv-nay",
+    "description": "Soft lacy rice crepes dipped in warm jaggery-sweetened coconut milk perfumed with cardamom.",
+    "veg": true,
+    "spice": 1,
+    "richness": 3,
+    "ingredients": [
+      "rice",
+      "coconut milk",
+      "jaggery",
+      "cardamom"
+    ],
+    "allergens": [
+      "coconut",
+      "gluten"
+    ],
+    "pairs_with": [
+      "kharvas"
+    ],
+    "flavor_dna": {
+      "format": "dessert",
+      "method": "steamed",
+      "texture": [
+        "soft",
+        "silky"
+      ],
+      "taste": [
+        "sweet",
+        "coconut",
+        "floral"
+      ],
+      "meal_role": "dessert",
+      "protein": "veg"
+    },
+    "verified": false
+  },
+  {
+    "id": "anda-malvani-masala",
+    "name_mr": "अंडा मालवणी मसाला",
+    "name_roman": "Anda Malvani Masala",
+    "aliases": [
+      "Malvani Egg Curry"
+    ],
+    "phonetic": "un-dah mahl-vuh-nee mah-sah-lah",
+    "description": "Boiled eggs scored and simmered in toasted coconut, onion, and fiery Malwani masala gravy.",
+    "veg": false,
+    "spice": 4,
+    "richness": 4,
+    "ingredients": [
+      "eggs",
+      "coconut",
+      "onion",
+      "malvani masala",
+      "garlic",
+      "coriander"
+    ],
+    "allergens": [
+      "egg",
+      "coconut"
+    ],
+    "pairs_with": [
+      "vade",
+      "bhakri-tandul",
+      "indrayani-bhaat"
+    ],
+    "flavor_dna": {
+      "format": "curry_plus_bread",
+      "method": "simmered",
+      "texture": [
+        "saucy",
+        "rich"
+      ],
+      "taste": [
+        "spicy",
+        "coconut",
+        "savory"
+      ],
+      "meal_role": "main",
+      "protein": "egg"
+    },
+    "verified": false
+  }
+]

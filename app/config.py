@@ -59,10 +59,14 @@ class Settings(BaseModel):
 def get_settings() -> Settings:
     mock_raw = os.environ.get("MOCK_SARVAM", "1").strip().lower()
     mock = mock_raw in {"1", "true", "yes", "on"}
-    return Settings(
-        sarvam_api_key=os.environ.get("SARVAM_API_KEY", ""),
-        mock_sarvam=mock,
-    )
+    cors_env = os.environ.get("CORS_ORIGINS", "").strip()
+    kwargs: dict[str, object] = {
+        "sarvam_api_key": os.environ.get("SARVAM_API_KEY", ""),
+        "mock_sarvam": mock,
+    }
+    if cors_env:
+        kwargs["cors_origins"] = [o.strip() for o in cors_env.split(",") if o.strip()]
+    return Settings(**kwargs)
 
 
 def ensure_runtime_dirs() -> None:

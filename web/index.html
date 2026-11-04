@@ -1,158 +1,346 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="auto">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Bolo Khana · बोलो खाना — Malwani Dining Companion</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Malwani Mitra · मालवणी मित्र — Coastal Malwani Companion</title>
   <link rel="stylesheet" href="/static/style.css" />
 </head>
 <body>
-  <header class="topbar">
-    <div>
-      <h1>Bolo Khana <span class="native">बोलो खाना</span></h1>
-      <p class="subtitle">Voice-first Malwani dining companion · Konkan &amp; Marathi</p>
+  <!-- Ambient Apple Mesh Background -->
+  <div class="ambient-stage" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- Dynamic Island Live Audio / Toast Pill -->
+  <div id="dynamic-island" class="dynamic-island" role="status" aria-live="polite">
+    <div class="island-content">
+      <div class="eq-bars" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <span id="island-text">Playing Marathi pronunciation…</span>
     </div>
-    <span id="mode-pill" class="pill">Checking mode…</span>
+  </div>
+
+  <!-- Frosted Glass Top Navigation -->
+  <header class="apple-nav">
+    <div class="nav-row">
+      <div class="brand" onclick="switchScreen('browse')" style="cursor:pointer">
+        <div class="app-icon">
+          <svg viewBox="0 0 36 36" fill="none" aria-hidden="true">
+            <rect width="36" height="36" rx="10" fill="url(#g1)"/>
+            <path d="M9 21c0-4.5 4-8 9-8s9 3.5 9 8H9Z" fill="#fff" fill-opacity=".92"/>
+            <path d="M7 22.5h22c-.7 2.8-3.8 4.5-11 4.5s-10.3-1.7-11-4.5Z" fill="#fff"/>
+            <path d="M14 9.5c0 1.4 1.2 2 1.2 3.3M18 8.5c0 1.4 1.2 2 1.2 3.3M22 9.5c0 1.4 1.2 2 1.2 3.3" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="g1" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FF6B2C"/>
+                <stop offset="0.55" stop-color="#E8381B"/>
+                <stop offset="1" stop-color="#9E1B46"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div>
+          <div class="brand-name">Malwani Mitra <span class="brand-native">मालवणी मित्र</span></div>
+          <div class="brand-tagline">Malwani Culinary &amp; Voice Intelligence</div>
+        </div>
+      </div>
+
+      <div class="nav-utilities">
+        <div id="profile-summary-chip" class="summary-chip" onclick="switchScreen('profile')" title="Edit Taste Profile">
+          <span id="chip-flag">🇦🇺</span>
+          <span id="chip-diet">Non-Veg</span>
+          <span>·</span>
+          <span id="chip-spice">🌶️ 3/5</span>
+        </div>
+        <span id="mode-pill" class="engine-pill">Connecting…</span>
+        <button id="theme-toggle" class="icon-circle" title="Switch Light / Dark Appearance" aria-label="Toggle appearance">◐</button>
+      </div>
+    </div>
+
+    <!-- iOS Segmented Tab Bar -->
+    <div class="seg-container">
+      <nav class="ios-segmented" role="tablist" aria-label="Primary navigation">
+        <button class="seg-item active" data-screen="profile" role="tab">
+          <span class="seg-ic">⚙️</span><span>Profile</span>
+        </button>
+        <button class="seg-item" data-screen="browse" role="tab">
+          <span class="seg-ic">🧭</span><span>Explore</span>
+        </button>
+        <button class="seg-item" data-screen="detail" role="tab">
+          <span class="seg-ic">🎴</span><span>Dish Card</span>
+        </button>
+        <button class="seg-item" data-screen="order" role="tab">
+          <span class="seg-ic">🛎️</span><span>Order</span>
+          <span id="order-count" class="seg-badge">0</span>
+        </button>
+        <button class="seg-item" data-screen="waiter" role="tab">
+          <span class="seg-ic">🎙️</span><span>Waiter Live</span>
+        </button>
+      </nav>
+    </div>
   </header>
 
-  <nav class="tabs" role="tablist">
-    <button class="tab active" data-screen="profile">1. Profile</button>
-    <button class="tab" data-screen="browse">2. Scan / Browse</button>
-    <button class="tab" data-screen="detail">3. Dish Card</button>
-    <button class="tab" data-screen="order">4. My Order (<span id="order-count">0</span>)</button>
-    <button class="tab" data-screen="waiter">5. Waiter Mode</button>
-  </nav>
-
-  <main class="container">
-    <div id="banner" class="banner hidden"></div>
-
-    <!-- Screen 1: Profile Setup -->
+  <main class="viewport">
+    <!-- ==================== SCREEN 1: PROFILE ==================== -->
     <section id="screen-profile" class="screen active">
-      <div class="card">
-        <h2>Your Taste &amp; Safety Profile</h2>
-        <div class="field">
-          <label for="origin-select">Home Country (for Cultural Bridge analogies)</label>
-          <select id="origin-select">
-            <option value="Australia">Australia</option>
-            <option value="UK">UK</option>
-            <option value="USA">USA</option>
-            <option value="Germany">Germany</option>
-            <option value="Japan">Japan</option>
-          </select>
+      <div class="hero-banner">
+        <div class="hero-copy">
+          <span class="kicker">STEP 1 · PERSONALIZE YOUR PALATE</span>
+          <h1 class="display-title">Your Dining Passport.</h1>
+          <p class="lead">Tell Malwani Mitra where you're visiting from and what you avoid. Every dish is deterministically screened for allergens and mapped to familiar flavors from home.</p>
         </div>
-
-        <div class="field">
-          <label for="diet-select">Dietary Preference</label>
-          <select id="diet-select">
-            <option value="nonveg">Non-Vegetarian (Seafood, Chicken, Mutton)</option>
-            <option value="veg">Vegetarian (Dairy OK, no meat/fish/egg)</option>
-            <option value="vegan">Vegan (Strictly plant-based)</option>
-          </select>
+        <div class="hero-stat-grid">
+          <div class="stat-tile">
+            <span class="stat-num">30</span>
+            <span class="stat-label">Authentic Malwani Dishes</span>
+          </div>
+          <div class="stat-tile">
+            <span class="stat-num">5</span>
+            <span class="stat-label">Home Cuisine Bridges</span>
+          </div>
+          <div class="stat-tile">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Deterministic Safety Engine</span>
+          </div>
         </div>
+      </div>
 
-        <div class="field">
-          <label for="spice-range">Max Comfortable Spice: <strong id="spice-val">3</strong> / 5</label>
-          <input id="spice-range" type="range" min="1" max="5" value="3" />
-        </div>
+      <div class="bento-2col">
+        <!-- Left column: Origin, Diet, Language -->
+        <div class="glass-sheet">
+          <div class="sheet-title">Origin &amp; Diet</div>
 
-        <div class="field">
-          <label>Avoid Allergens (deterministic safety block)</label>
-          <div id="allergen-grid" class="chip-grid">
-            <label class="chip-check"><input type="checkbox" value="peanut" /> Peanut</label>
-            <label class="chip-check"><input type="checkbox" value="tree_nut" /> Tree Nut</label>
-            <label class="chip-check"><input type="checkbox" value="shellfish" /> Shellfish</label>
-            <label class="chip-check"><input type="checkbox" value="fish" /> Fish</label>
-            <label class="chip-check"><input type="checkbox" value="gluten" /> Gluten</label>
-            <label class="chip-check"><input type="checkbox" value="dairy" /> Dairy</label>
-            <label class="chip-check"><input type="checkbox" value="egg" /> Egg</label>
-            <label class="chip-check"><input type="checkbox" value="sesame" /> Sesame</label>
-            <label class="chip-check"><input type="checkbox" value="coconut" /> Coconut</label>
+          <div class="setting-item">
+            <div class="setting-label">
+              <strong>Home Country</strong>
+              <span>Calibrates Cultural Bridge analogies &amp; spice baseline</span>
+            </div>
+            <select id="origin-select" class="apple-select">
+              <option value="Australia">🇦🇺 Australia</option>
+              <option value="UK">🇬🇧 United Kingdom</option>
+              <option value="USA">🇺🇸 United States</option>
+              <option value="Germany">🇩🇪 Germany</option>
+              <option value="Japan">🇯🇵 Japan</option>
+            </select>
+          </div>
+
+          <div class="setting-item">
+            <div class="setting-label">
+              <strong>Dietary Rule</strong>
+              <span>Non-matching proteins are automatically marked BLOCK</span>
+            </div>
+            <select id="diet-select" class="apple-select">
+              <option value="nonveg">🍖 Non-Vegetarian (Seafood &amp; Meat)</option>
+              <option value="veg">🥬 Vegetarian (Dairy OK · No Egg/Meat/Fish)</option>
+              <option value="vegan">🌱 Vegan (Strictly Plant-Based)</option>
+            </select>
+          </div>
+
+          <div class="setting-item">
+            <div class="setting-label">
+              <strong>Bridge Translation</strong>
+              <span>Powered by Sarvam Mayura</span>
+            </div>
+            <select id="lang-select" class="apple-select">
+              <option value="en-IN">English (Default)</option>
+              <option value="mr-IN">Marathi · मराठी</option>
+              <option value="hi-IN">Hindi · हिन्दी</option>
+            </select>
+          </div>
+
+          <div class="setting-item vertical">
+            <div class="row-between">
+              <div class="setting-label">
+                <strong>Spice Comfort Ceiling</strong>
+                <span>Dishes above this rating trigger a yellow WARN badge</span>
+              </div>
+              <div class="spice-pill-big"><span id="spice-val">3</span><small>/5</small></div>
+            </div>
+            <input id="spice-range" class="apple-range" type="range" min="1" max="5" value="3" />
+            <div class="range-labels">
+              <span>1 · Mild</span>
+              <span>2 · Gentle</span>
+              <span>3 · Balanced</span>
+              <span>4 · Coastal Hot</span>
+              <span>5 · Fiery</span>
+            </div>
           </div>
         </div>
 
-        <div class="field">
-          <label for="lang-select">Explanation Language</label>
-          <select id="lang-select">
-            <option value="en-IN">English</option>
-            <option value="mr-IN">Marathi (मराठी)</option>
-            <option value="hi-IN">Hindi (हिन्दी)</option>
-          </select>
-        </div>
+        <!-- Right column: Allergen Shield -->
+        <div class="glass-sheet">
+          <div class="sheet-title">Deterministic Allergen Shield</div>
+          <p class="sheet-sub">Includes hidden-ingredient rules (e.g. <em>Sol Kadhi → Coconut</em>, <em>Kharvas → Dairy</em>, <em>Vade → Gluten</em>). The LLM never overrides these rules.</p>
 
-        <button id="save-profile-btn" class="btn primary full">Save Profile &amp; Browse Malwani Menu →</button>
-        <p class="disclaimer">Safety badges are deterministic from our KB, not medical advice. Always confirm allergies with restaurant staff.</p>
+          <div id="allergen-grid" class="allergen-matrix">
+            <label class="allergen-tile"><input type="checkbox" value="peanut" /><span class="tile-box"><span class="tile-emoji">🥜</span><span class="tile-name">Peanut</span><small>Shengdana</small></span></label>
+            <label class="allergen-tile"><input type="checkbox" value="tree_nut" /><span class="tile-box"><span class="tile-emoji">🌰</span><span class="tile-name">Tree Nut</span><small>Cashew / Kaju</small></span></label>
+            <label class="allergen-tile"><input type="checkbox" value="shellfish" /><span class="tile-box"><span class="tile-emoji">🦐</span><span class="tile-name">Shellfish</span><small>Prawn, Crab, Clam</small></span></label>
+            <label class="allergen-tile"><input type="checkbox" value="fish" /><span class="tile-box"><span class="tile-emoji">🐟</span><span class="tile-name">Fish</span><small>Surmai, Bombil</small></span></label>
+            <label class="allergen-tile"><input type="checkbox" value="gluten" /><span class="tile-box"><span class="tile-emoji">🌾</span><span class="tile-name">Gluten</span><small>Wheat / Rava</small></span></label>
+            <label class="allergen-tile"><input type="checkbox" value="dairy" /><span class="tile-box"><span class="tile-emoji">🥛</span><span class="tile-name">Dairy</span><small>Ghee, Milk</small></span></label>
+            <label class="allergen-tile"><input type="checkbox" value="egg" /><span class="tile-box"><span class="tile-emoji">🥚</span><span class="tile-name">Egg</span><small>Anda</small></span></label>
+            <label class="allergen-tile"><input type="checkbox" value="sesame" /><span class="tile-box"><span class="tile-emoji">✨</span><span class="tile-name">Sesame</span><small>Til</small></span></label>
+            <label class="allergen-tile"><input type="checkbox" value="coconut" /><span class="tile-box"><span class="tile-emoji">🥥</span><span class="tile-name">Coconut</span><small>Nariyal / Khobra</small></span></label>
+          </div>
+
+          <div class="sheet-footer">
+            <button id="save-profile-btn" class="apple-btn primary xl">
+              Save Passport &amp; Explore Menu →
+            </button>
+            <p class="legal-note">⚠️ Informational aid only — never a medical guarantee. Always verify severe allergies directly with restaurant staff.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Screen 2: Scan / Browse -->
+    <!-- ==================== SCREEN 2: EXPLORE & SCAN ==================== -->
     <section id="screen-browse" class="screen">
-      <div class="card">
-        <h2>Scan Paper Menu (Sarvam Vision)</h2>
-        <div class="row">
-          <input id="menu-file" type="file" accept="image/*" />
-          <button id="scan-btn" class="btn primary">Scan Menu Photo</button>
+      <!-- Top Bento Row: Vision Menu Scanner + 105B Sommelier -->
+      <div class="bento-2col">
+        <div class="glass-sheet">
+          <div class="row-between">
+            <div>
+              <span class="kicker">SARVAM VISION OCR</span>
+              <h2 class="card-h2">Scan Paper Menu</h2>
+            </div>
+            <span class="feature-tag">rapidfuzz + 105B</span>
+          </div>
+          <p class="sheet-sub">Upload a menu photo or run an instant demo scan. Known dishes unlock full cards; unfamiliar specials get an unverified explanation badge.</p>
+          <div class="control-row">
+            <label class="upload-pill">
+              <input id="menu-file" type="file" accept="image/*" />
+              <span id="file-label-text">📷 Choose Menu Photo (or leave empty for Demo Scan)</span>
+            </label>
+            <button id="scan-btn" class="apple-btn primary">Scan Menu</button>
+          </div>
+          <div id="scan-results" class="scan-grid"></div>
         </div>
-        <div id="scan-results" class="grid-cards"></div>
+
+        <div class="glass-sheet">
+          <div class="row-between">
+            <div>
+              <span class="kicker">SARVAM-105B SOMMELIER</span>
+              <h2 class="card-h2">Ask About Any Dish</h2>
+            </div>
+            <span class="feature-tag">Strict KB Grounding</span>
+          </div>
+          <p class="sheet-sub">Ask what pairs with rice, which seafood is mildest, or what kokum tastes like.</p>
+          <div class="quick-prompts">
+            <button class="prompt-chip" data-q="What is Kombdi Vade and what should I drink with it?">🍗 Kombdi Vade + Drink?</button>
+            <button class="prompt-chip" data-q="Which Malwani dishes are mild and gluten-free?">🌾 Mild &amp; Gluten-Free?</button>
+            <button class="prompt-chip" data-q="Tell me about Bombil Fry and Sol Kadhi.">🐟 Bombil Fry &amp; Sol Kadhi</button>
+          </div>
+          <div class="control-row">
+            <input id="ask-input" class="apple-input" type="text" placeholder="Ask the Malwani sommelier…" />
+            <button id="ask-btn" class="apple-btn secondary">Ask</button>
+          </div>
+          <div id="ask-output" class="sommelier-reply hidden"></div>
+        </div>
       </div>
 
-      <div class="card">
-        <div class="row spread">
-          <h2>All 30 Malwani Dishes</h2>
-          <input id="search-input" type="search" placeholder="Filter by name or ingredient…" />
+      <!-- Filter Bar for 30 Dishes -->
+      <div class="catalog-header">
+        <div>
+          <span class="kicker">CURATED MALWANI KNOWLEDGE BASE</span>
+          <h2 class="catalog-title">Explore 30 Coastal Dishes</h2>
         </div>
-        <div id="dish-list" class="grid-cards"></div>
+        <div class="catalog-controls">
+          <div class="role-pills" id="role-filters">
+            <button class="filter-pill active" data-role="all">All (30)</button>
+            <button class="filter-pill" data-role="main">Mains</button>
+            <button class="filter-pill" data-role="starter">Starters</button>
+            <button class="filter-pill" data-role="side">Breads &amp; Sides</button>
+            <button class="filter-pill" data-role="drink">Coolers</button>
+            <button class="filter-pill" data-role="dessert">Desserts</button>
+            <button class="filter-pill" data-role="safe">✅ Safe Only</button>
+          </div>
+          <input id="search-input" class="apple-input search" type="search" placeholder="Search English, मराठी, or ingredient…" />
+        </div>
       </div>
 
-      <div class="card">
-        <h2>Ask About the Menu (Grounded 105B)</h2>
-        <div class="row">
-          <input id="ask-input" type="text" placeholder="e.g., What is mild and goes with Sol Kadhi?" />
-          <button id="ask-btn" class="btn primary">Ask</button>
-        </div>
-        <div id="ask-output" class="reply-box hidden"></div>
-      </div>
+      <div id="dish-list" class="dish-grid"></div>
     </section>
 
-    <!-- Screen 3: Dish Card Detail + Bridge + Pronunciation Coach -->
+    <!-- ==================== SCREEN 3: DISH CARD DETAIL ==================== -->
     <section id="screen-detail" class="screen">
-      <div id="detail-content" class="card">
-        <p>Select any dish from Scan / Browse to inspect its pronunciation, safety badge, and cultural bridge.</p>
-      </div>
+      <div id="detail-content" class="detail-wrapper"></div>
     </section>
 
-    <!-- Screen 4: My Order -->
+    <!-- ==================== SCREEN 4: MY ORDER ==================== -->
     <section id="screen-order" class="screen">
-      <div class="card">
-        <h2>My Order Tray</h2>
-        <div id="order-items"></div>
-        <button id="draft-order-btn" class="btn primary full">Draft Polite Marathi Order (105B + Bulbul TTS)</button>
-        <div id="drafted-order-box" class="reply-box hidden"></div>
+      <div class="hero-banner compact">
+        <div>
+          <span class="kicker">POLITE MARATHI VOICE SCRIPT</span>
+          <h1 class="display-title">Your Table's Order.</h1>
+          <p class="lead">Review your selected dishes and let Sarvam-105B compose a natural Marathi order that includes your spice ceiling and allergen rules.</p>
+        </div>
+      </div>
+
+      <div class="bento-2col">
+        <div class="glass-sheet">
+          <div class="row-between">
+            <div class="sheet-title" style="margin:0">Selected Dishes</div>
+            <button class="apple-btn ghost sm" onclick="switchScreen('browse')">+ Add More Dishes</button>
+          </div>
+          <div id="order-items" class="tray-list"></div>
+          <div class="sheet-footer">
+            <button id="draft-order-btn" class="apple-btn primary xl">
+              ✨ Generate Marathi Voice Order
+            </button>
+          </div>
+        </div>
+
+        <div id="drafted-order-box" class="glass-sheet empty-state">
+          <div class="empty-illustration">🗣️</div>
+          <h3>Ready to Draft in Marathi</h3>
+          <p class="sheet-sub">Click "Generate Marathi Voice Order" to synthesize native Devanagari, phonetic syllables, and Bulbul v3 audio.</p>
+        </div>
       </div>
     </section>
 
-    <!-- Screen 5: Waiter Mode -->
+    <!-- ==================== SCREEN 5: WAITER LIVE ==================== -->
     <section id="screen-waiter" class="screen">
-      <div class="card waiter-card">
-        <h2>Waiter Mode · Live Two-Way Bridge</h2>
-        <p class="subtitle">Play your Marathi order or hold the mic when the waiter speaks Marathi.</p>
+      <div class="hero-banner compact">
+        <div>
+          <span class="kicker">REAL-TIME BILINGUAL BRIDGE</span>
+          <h1 class="display-title">Talk to the Waiter.</h1>
+          <p class="lead">Play your Marathi order with one tap. When the waiter answers in Marathi, record or simulate their reply to translate into English and see safe KB alternatives.</p>
+        </div>
+      </div>
 
-        <div class="bubble-pair">
-          <div class="bubble mr-bubble">
-            <span class="bubble-label">You → Waiter (Marathi · मराठी)</span>
-            <p id="waiter-mr-text">Tap "Draft Polite Marathi Order" in My Order first, or play default greeting.</p>
-            <button id="play-order-tts" class="btn secondary">🔊 Speak Marathi to Waiter</button>
+      <div class="waiter-grid">
+        <!-- Outgoing Marathi Card -->
+        <div class="waiter-card you-card">
+          <div class="wc-top">
+            <span class="wc-badge">YOU SPEAK · MARATHI (BULBUL V3)</span>
+            <button id="play-order-tts" class="apple-btn primary">🔊 Play Marathi Audio</button>
           </div>
-
-          <div class="bubble en-bubble">
-            <span class="bubble-label">Waiter → You (English via Saaras Translate + 105B)</span>
-            <p id="waiter-en-text">Hold the big mic button while the waiter replies in Marathi.</p>
-            <div id="waiter-alts"></div>
-          </div>
+          <div id="waiter-mr-text" class="wc-devanagari">नमस्कार दादा, आम्हाला एक प्लेट कोंबडी वडे आणि सोलकढी द्या. कृपया तिखट मध्यम ठेवा.</div>
+          <div id="waiter-mr-phonetic" class="wc-phonetic">/nuh-mus-kaar dah-dah, aam-haa-laa ek plate kom-bdee vah-day aa-ni sohl kuh-dhee dya/</div>
+          <div id="waiter-mr-sub" class="wc-english">“Hello brother, please bring us 1 Kombdi Vade and Sol Kadhi. Please keep the spice medium.”</div>
         </div>
 
-        <div class="mic-center">
-          <button id="waiter-mic-btn" class="mic-btn">🎤 Tap to Listen to Waiter (Marathi → English)</button>
+        <!-- Incoming Waiter Card -->
+        <div class="waiter-card waiter-reply-card">
+          <div class="wc-top">
+            <span class="wc-badge">WAITER REPLIES · MARATHI → ENGLISH (SAARAS V3 TRANSLATE)</span>
+          </div>
+          <div id="waiter-en-text" class="wc-english-lg">Tap the glowing microphone orb below when the waiter speaks Marathi.</div>
+          <div id="waiter-alts"></div>
         </div>
+      </div>
+
+      <div class="siri-dock">
+        <button id="waiter-mic-btn" class="siri-orb-btn">
+          <span class="siri-glow"></span>
+          <span class="siri-mic">🎙️</span>
+          <span id="mic-label">Listen to Waiter (Marathi → English)</span>
+        </button>
       </div>
     </section>
   </main>

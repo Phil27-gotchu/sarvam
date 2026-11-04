@@ -1,7 +1,7 @@
 services:
-  bolo-khana:
+  malwani-mitra:
     build: .
-    container_name: bolo-khana
+    container_name: malwani-mitra
     ports:
       - "8000:8000"
     env_file:

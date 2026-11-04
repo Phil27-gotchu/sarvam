@@ -1,4 +1,4 @@
-# Bolo Khana (बोलो खाना)
+# Malwani Mitra (मालवणी मित्र)
 
 Voice-first dining companion for foreign tourists exploring regional **Malwani / Marathi** cuisine.
 

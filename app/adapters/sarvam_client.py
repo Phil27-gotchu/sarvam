@@ -14,7 +14,7 @@ import httpx
 from app.config import Settings
 from app.domain.models import MenuItem
 
-logger = logging.getLogger("bolo_khana.sarvam")
+logger = logging.getLogger("malwani_mitra.sarvam")
 
 TTS_SUPPORTED_LANGS = {
     "bn-IN", "en-IN", "gu-IN", "hi-IN", "kn-IN",
@@ -22,7 +22,7 @@ TTS_SUPPORTED_LANGS = {
 }
 
 STRICT_SYSTEM_PROMPT = (
-    "You are Bolo Khana's culinary assistant for Malwani cuisine. "
+    "You are Malwani Mitra's culinary assistant for Malwani cuisine. "
     "Use ONLY the provided KB context for food facts, ingredients, spice, and allergens. "
     "Never invent ingredients or give medical/allergy guarantees. "
     "Always respond with a single valid JSON object only — no markdown fences, no prose outside JSON."

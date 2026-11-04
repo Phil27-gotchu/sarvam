@@ -131,5 +131,5 @@ async def ask_assistant(
         "answer": answer,
         "referenced_dish_ids": llm_resp.get("referenced_dish_ids", []),
         "audio_base64": audio_b64,
-        "disclaimer": "Grounded in Bolo Khana KB. Confirm severe allergies with the kitchen.",
+        "disclaimer": "Grounded in Malwani Mitra KB. Confirm severe allergies with the kitchen.",
     }

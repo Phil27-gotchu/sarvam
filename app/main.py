@@ -1,4 +1,4 @@
-"""FastAPI application entrypoint for Bolo Khana."""
+"""FastAPI application entrypoint for Malwani Mitra."""
 
 from __future__ import annotations
 
@@ -19,7 +19,7 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s %(levelname)s %(name)s %(message)s",
 )
-logger = logging.getLogger("bolo_khana")
+logger = logging.getLogger("malwani_mitra")
 
 
 @asynccontextmanager
@@ -41,7 +41,7 @@ async def lifespan(_: FastAPI) -> AsyncIterator[None]:
 def create_app() -> FastAPI:
     settings = get_settings()
     application = FastAPI(
-        title="Bolo Khana",
+        title="Malwani Mitra",
         description="Voice-first Malwani dining companion for tourists",
         version="1.0.0",
         lifespan=lifespan,

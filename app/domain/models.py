@@ -1,4 +1,4 @@
-"""Domain models for Bolo Khana."""
+"""Domain models for Malwani Mitra."""
 
 from __future__ import annotations
 

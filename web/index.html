@@ -314,32 +314,61 @@
       </div>
 
       <div class="waiter-grid">
-        <!-- Outgoing Marathi Card -->
+        <!-- Outgoing Marathi Card: You Speak -->
         <div class="waiter-card you-card">
           <div class="wc-top">
-            <span class="wc-badge">YOU SPEAK · MARATHI (BULBUL V3)</span>
+            <span class="wc-badge">YOU SPEAK · ENGLISH → MARATHI AUDIO (BULBUL V3)</span>
             <button id="play-order-tts" class="apple-btn primary">🔊 Play Marathi Audio</button>
           </div>
           <div id="waiter-mr-text" class="wc-devanagari">नमस्कार दादा, आम्हाला एक प्लेट कोंबडी वडे आणि सोलकढी द्या. कृपया तिखट मध्यम ठेवा.</div>
           <div id="waiter-mr-phonetic" class="wc-phonetic">/nuh-mus-kaar dah-dah, aam-haa-laa ek plate kom-bdee vah-day aa-ni sohl kuh-dhee dya/</div>
           <div id="waiter-mr-sub" class="wc-english">“Hello brother, please bring us 1 Kombdi Vade and Sol Kadhi. Please keep the spice medium.”</div>
+
+          <div style="margin-top:1.15rem;padding-top:1rem;border-top:1px solid var(--border);">
+            <div style="font-size:0.75rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-secondary);margin-bottom:0.5rem;">Speak or Type in English (Translates to Marathi Voice):</div>
+            <div class="control-row">
+              <input id="user-en-input" class="apple-input" type="text" placeholder="Speak or type in English (e.g. Please make it less spicy)..." style="flex:1;" />
+              <button id="user-speak-en-btn" class="apple-btn primary">🎤 Speak &amp; Translate</button>
+            </div>
+            <div class="quick-prompts" style="margin-top:0.65rem;">
+              <button class="prompt-chip" onclick="quickSpeakEnglish('Please make our food less spicy and bring extra rice.')">🌶️ Make it less spicy</button>
+              <button class="prompt-chip" onclick="quickSpeakEnglish('Could you please bring extra water and glasses?')">💧 Bring extra water</button>
+              <button class="prompt-chip" onclick="quickSpeakEnglish('Could you please bring the bill?')">🧾 Bring the bill</button>
+              <button class="prompt-chip" onclick="quickSpeakEnglish('Which fish is freshest today?')">🐟 Which fish is fresh today?</button>
+            </div>
+          </div>
         </div>
 
-        <!-- Incoming Waiter Card -->
+        <!-- Incoming Waiter Card: Waiter Speaks -->
         <div class="waiter-card waiter-reply-card">
           <div class="wc-top">
             <span class="wc-badge">WAITER REPLIES · MARATHI → ENGLISH (SAARAS V3 TRANSLATE)</span>
           </div>
-          <div id="waiter-en-text" class="wc-english-lg">Tap the glowing microphone orb below when the waiter speaks Marathi.</div>
+          <div id="waiter-mr-heard" class="wc-devanagari" style="font-size:1.15rem;color:var(--text-secondary);margin-bottom:0.4rem;"></div>
+          <div id="waiter-en-text" class="wc-english-lg">Tap "Listen to Waiter" below when the waiter speaks Marathi.</div>
           <div id="waiter-alts"></div>
+
+          <div style="margin-top:1.15rem;padding-top:1rem;border-top:1px solid var(--border);">
+            <div style="font-size:0.75rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-secondary);margin-bottom:0.5rem;">Quick Waiter Responses (Tap to translate):</div>
+            <div class="quick-prompts">
+              <button class="prompt-chip" onclick="simulateWaiter('सुरमई फ्राय संपले आहे, पण पापलेट फ्राय तयार आहे.')">“सुरमई संपले आहे, पापलेट तयार आहे”</button>
+              <button class="prompt-chip" onclick="simulateWaiter('जेवण तयार व्हायला पंधरा मिनिटे लागतील.')">“पंधरा मिनिटे लागतील”</button>
+              <button class="prompt-chip" onclick="simulateWaiter('हो नक्की, लगेच पाणी आणि भात आणतो.')">“लगेच पाणी आणि भात आणतो”</button>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="siri-dock">
+      <div class="siri-dock" style="gap:1rem;flex-wrap:wrap;justify-content:center;">
         <button id="waiter-mic-btn" class="siri-orb-btn">
           <span class="siri-glow"></span>
           <span class="siri-mic">🎙️</span>
           <span id="mic-label">Listen to Waiter (Marathi → English)</span>
+        </button>
+        <button id="tourist-mic-btn" class="siri-orb-btn" style="background:linear-gradient(135deg, #10b981, #059669, #0284c7);">
+          <span class="siri-glow"></span>
+          <span class="siri-mic">🎤</span>
+          <span id="tourist-mic-label">You Speak (English → Marathi Voice)</span>
         </button>
       </div>
     </section>

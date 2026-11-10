@@ -30,6 +30,13 @@ class DraftOrderRequest(BaseModel):
 
 class ListenBodyRequest(BaseModel):
     audio_base64: str | None = None
+    text: str | None = None
+    profile: TasteProfile = Field(default_factory=TasteProfile)
+
+
+class SpeakEnglishRequest(BaseModel):
+    text: str | None = None
+    audio_base64: str | None = None
     profile: TasteProfile = Field(default_factory=TasteProfile)
 
 
@@ -71,4 +78,13 @@ async def listen_waiter_json_endpoint(
     adapter: SarvamAdapter = Depends(get_sarvam_adapter),
 ) -> dict[str, Any]:
     raw = base64.b64decode(req.audio_base64) if req.audio_base64 else b""
-    return await order_service.listen_waiter(raw, req.profile, repo, adapter)
+    return await order_service.listen_waiter(raw, req.profile, repo, adapter, text=req.text)
+
+
+@router.post("/speak-english")
+async def speak_english_endpoint(
+    req: SpeakEnglishRequest,
+    repo: Repository = Depends(get_repo),
+    adapter: SarvamAdapter = Depends(get_sarvam_adapter),
+) -> dict[str, Any]:
+    return await order_service.speak_english(req.text, req.audio_base64, req.profile, repo, adapter)

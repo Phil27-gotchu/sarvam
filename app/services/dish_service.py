@@ -4,13 +4,16 @@ from __future__ import annotations
 
 import base64
 import hashlib
+import logging
 from typing import Any
 
 from app.adapters.base import SarvamAdapter
-from app.config import AUDIO_CACHE_DIR, ensure_runtime_dirs
+from app.config import AUDIO_CACHE_DIR, ensure_runtime_dirs, get_settings
 from app.data.repo import Repository
 from app.domain import allergen_engine
 from app.domain.models import TasteProfile
+
+logger = logging.getLogger("malwani_mitra.dish_service")
 
 
 def list_dishes_with_safety(repo: Repository, profile: TasteProfile) -> list[dict[str, Any]]:
@@ -47,6 +50,7 @@ async def pronounce_dish(
     adapter: SarvamAdapter,
 ) -> dict[str, Any]:
     ensure_runtime_dirs()
+    settings = get_settings()
     spoken_text = text
     phonetic = ""
     if dish_id:
@@ -58,15 +62,34 @@ async def pronounce_dish(
     if not spoken_text:
         raise ValueError("dish_id or text is required")
 
-    cache_key = hashlib.sha256(f"{lang}:{spoken_text}".encode("utf-8")).hexdigest()[:24]
+    mode_tag = "mock" if settings.mock_sarvam else "live"
+    cache_key = hashlib.sha256(f"{mode_tag}:{lang}:{spoken_text}".encode("utf-8")).hexdigest()[:24]
     cache_file = AUDIO_CACHE_DIR / f"{cache_key}.wav"
+    is_mock = settings.mock_sarvam
+    warning = adapter.tts_warning
+
     if cache_file.exists():
         audio_bytes = cache_file.read_bytes()
         cached = True
     else:
-        audio_bytes = await adapter.tts(spoken_text, lang=lang)
-        cache_file.write_bytes(audio_bytes)
-        cached = False
+        try:
+            audio_bytes = await adapter.tts(spoken_text, lang=lang)
+            cache_file.write_bytes(audio_bytes)
+            cached = False
+        except Exception as exc:
+            logger.warning("TTS generation failed: %s; falling back to offline audio", exc)
+            from app.adapters.sarvam_mock import _synth_wav_bytes
+
+            audio_bytes = _synth_wav_bytes(f"{lang}:{spoken_text}")
+            cached = False
+            is_mock = True
+            exc_str = str(exc).lower()
+            if "403" in exc_str or "forbidden" in exc_str or "invalid_api_key" in exc_str:
+                warning = "Sarvam API Key is invalid or expired (403). Using browser voice pronunciation."
+            elif "401" in exc_str or "unauthorized" in exc_str:
+                warning = "Sarvam API Key unauthorized (401). Using browser voice pronunciation."
+            else:
+                warning = f"Live Sarvam TTS unavailable ({type(exc).__name__}). Using browser voice pronunciation."
 
     return {
         "dish_id": dish_id,
@@ -76,7 +99,8 @@ async def pronounce_dish(
         "cache_key": cache_key,
         "audio_base64": base64.b64encode(audio_bytes).decode("ascii"),
         "mime_type": "audio/wav",
-        "warning": adapter.tts_warning,
+        "warning": warning,
+        "is_mock": is_mock,
     }
 
 

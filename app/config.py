@@ -21,12 +21,12 @@ def _load_dotenv() -> None:
     env_path = ROOT / ".env"
     if not env_path.exists():
         return
-    for line in env_path.read_text().splitlines():
+    for line in env_path.read_text(encoding="utf-8").splitlines():
         line = line.strip()
         if not line or line.startswith("#") or "=" not in line:
             continue
         key, _, value = line.partition("=")
-        os.environ.setdefault(key.strip(), value.strip().strip('"').strip("'"))
+        os.environ[key.strip()] = value.strip().strip('"').strip("'")
 
 
 _load_dotenv()
@@ -51,17 +51,22 @@ class Settings(BaseModel):
     tts_speaker: str = "shubh"
     stt_model: str = "saaras:v3"
     translate_model: str = "mayura:v1"
-    llm_model: str = "sarvam-105b"
+    llm_model: str = "sarvam-105b-conversations"
     llm_temperature: float = 0.2
 
 
 @lru_cache
 def get_settings() -> Settings:
-    mock_raw = os.environ.get("MOCK_SARVAM", "1").strip().lower()
-    mock = mock_raw in {"1", "true", "yes", "on"}
+    mock_env = os.environ.get("MOCK_SARVAM")
+    api_key = os.environ.get("SARVAM_API_KEY", "").strip()
+    if mock_env is not None and mock_env.strip() != "":
+        mock = mock_env.strip().lower() in {"1", "true", "yes", "on"}
+    else:
+        # If API key is present, default to Live Sarvam AI mode (mock=False)
+        mock = not bool(api_key)
     cors_env = os.environ.get("CORS_ORIGINS", "").strip()
     kwargs: dict[str, object] = {
-        "sarvam_api_key": os.environ.get("SARVAM_API_KEY", ""),
+        "sarvam_api_key": api_key,
         "mock_sarvam": mock,
     }
     if cors_env:

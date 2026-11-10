@@ -2,12 +2,15 @@
 
 from __future__ import annotations
 
+import logging
 from typing import Any
 
 from app.adapters.base import SarvamAdapter
 from app.data.repo import Repository
 from app.domain import similarity
 from app.domain.models import FeedbackEntry
+
+logger = logging.getLogger("malwani_mitra.bridge_service")
 
 
 async def build_bridge(
@@ -27,26 +30,30 @@ async def build_bridge(
     matches = similarity.top_k(dish.flavor_dna, origin.popular_dishes, k=3)
     top = matches[0]
 
-    llm_json = await adapter.ask(
-        (
-            "Write a friendly cultural bridge comparing the Malwani dish to the tourist's home dishes. "
-            "Return strict JSON: {\"closest\": str, \"similar_in\": [str], \"different_in\": [str], "
-            "\"spice_calibration\": str, \"explanation\": str}. Always include different_in."
-        ),
-        {
-            "task": "bridge",
-            "origin": origin.country,
-            "dish": {
-                "id": dish.id,
-                "name_roman": dish.name_roman,
-                "name_mr": dish.name_mr,
-                "description": dish.description,
-                "spice": dish.spice,
-                "flavor_dna": dish.flavor_dna.model_dump(),
+    llm_json: dict[str, Any] = {}
+    try:
+        llm_json = await adapter.ask(
+            (
+                "Write a friendly cultural bridge comparing the Malwani dish to the tourist's home dishes. "
+                "Return strict JSON: {\"closest\": str, \"similar_in\": [str], \"different_in\": [str], "
+                "\"spice_calibration\": str, \"explanation\": str}. Always include different_in."
+            ),
+            {
+                "task": "bridge",
+                "origin": origin.country,
+                "dish": {
+                    "id": dish.id,
+                    "name_roman": dish.name_roman,
+                    "name_mr": dish.name_mr,
+                    "description": dish.description,
+                    "spice": dish.spice,
+                    "flavor_dna": dish.flavor_dna.model_dump(),
+                },
+                "matches": [m.model_dump() for m in matches],
             },
-            "matches": [m.model_dump() for m in matches],
-        },
-    )
+        )
+    except Exception as exc:
+        logger.warning("LLM bridge generation failed: %s; using rule-based bridge", exc)
 
     explanation = str(
         llm_json.get("explanation")

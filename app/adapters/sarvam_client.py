@@ -29,7 +29,9 @@ STRICT_SYSTEM_PROMPT = (
 )
 
 
-def _extract_json_obj(raw: str) -> dict[str, Any]:
+def _extract_json_obj(raw: str | None) -> dict[str, Any]:
+    if not raw:
+        raise ValueError("Empty response received from LLM")
     cleaned = raw.strip()
     cleaned = re.sub(r"^```(?:json)?\s*", "", cleaned)
     cleaned = re.sub(r"\s*```$", "", cleaned)
@@ -81,6 +83,17 @@ class RealSarvamAdapter:
                     continue
                 resp.raise_for_status()
                 return resp
+            except httpx.HTTPStatusError as exc:
+                last_exc = exc
+                if exc.response.status_code in {400, 401, 403, 404, 422}:
+                    # Client-side / auth errors should not be retried
+                    raise
+                logger.warning(
+                    "sarvam_call_retry",
+                    extra={"path": path, "attempt": attempt + 1, "error": type(exc).__name__},
+                )
+                if attempt < self._settings.max_retries:
+                    await asyncio.sleep(0.4 * (attempt + 1))
             except Exception as exc:
                 last_exc = exc
                 logger.warning(
@@ -109,7 +122,8 @@ class RealSarvamAdapter:
             }
             resp = await self._request("POST", "/v1/chat/completions", json_body=payload)
             body = resp.json()
-            content = body["choices"][0]["message"]["content"]
+            message = body.get("choices", [{}])[0].get("message", {})
+            content = message.get("content") or message.get("reasoning_content") or ""
             try:
                 return _extract_json_obj(content)
             except Exception:
@@ -147,6 +161,7 @@ class RealSarvamAdapter:
         payload = {
             "text": text[:2500],
             "language_code": target_lang,
+            "target_language_code": target_lang,
             "model": self._settings.tts_model,
             "speaker": voice.lower(),
             "output_audio_codec": "wav",
@@ -157,6 +172,7 @@ class RealSarvamAdapter:
             if target_lang != "hi-IN":
                 self.tts_warning = "mr-IN TTS unavailable; fell back to hi-IN voice"
                 payload["language_code"] = "hi-IN"
+                payload["target_language_code"] = "hi-IN"
                 resp = await self._request("POST", "/text-to-speech", json_body=payload)
             else:
                 raise
